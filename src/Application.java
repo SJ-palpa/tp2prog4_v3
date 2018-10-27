@@ -1,11 +1,11 @@
 import Exceptions.*;
+import org.apache.log4j.Logger;
 
-import java.time.Instant;
 import java.util.*;
 
 public class Application implements InterfaceGestionnairePersonne,InterfaceGestionnaireTache,InterfaceGestionnaireGroupe{
 
-    //Logger log = Logger.getLogger(Application.class);
+    final static Logger log = Logger.getLogger(Application.class);
 
     Map<PersonneReference, Personne> personnes = new HashMap<>();
     Map<TacheReference, Tache> taches = new HashMap<>();
@@ -22,7 +22,7 @@ public class Application implements InterfaceGestionnairePersonne,InterfaceGesti
         GroupeReference grRef = new GroupeReference();
         groupes.put(grRef,gr);
         groupe_personnes.put(grRef,new ArrayList<>());
-
+        log.info("La groupe "+grRef+" à bien été crée");
         return grRef;
     }
 
@@ -39,6 +39,7 @@ public class Application implements InterfaceGestionnairePersonne,InterfaceGesti
             arrayPersonneGroupe.add(persRef);
             groupe_personnes.put(groupeReference, arrayPersonneGroupe);
             personne_taches.put(persRef,new ArrayList<>());
+            log.info("La personne "+persRef+" à bien été crée");
             return persRef;
         }
         else
@@ -63,6 +64,7 @@ public class Application implements InterfaceGestionnairePersonne,InterfaceGesti
         {
             ArrayList<PersonneReference> arrayPersonneGroupe = groupe_personnes.get(groupeReference);
             arrayPersonneGroupe.add(personneReference);
+            log.info("La personne "+personneReference+" à bien été ajouté au groupe" +groupeReference);
         }
     }
 
@@ -84,7 +86,7 @@ public class Application implements InterfaceGestionnairePersonne,InterfaceGesti
                 if(arrPers.get(i) == personneReference)
                 {
                     arrPers.remove(personneReference);
-                   // log.info(personneReference + ", à bien supprimé du groupe.");
+                    log.info(personneReference + ", à bien supprimé du groupe.");
                 }
             }
         }
@@ -114,8 +116,9 @@ public class Application implements InterfaceGestionnairePersonne,InterfaceGesti
                 personne_taches.put(personneReference,arrTchRef);
             }
             arrTchRef.add(tchRef);
+
+            log.info(personneReference + ", à bien crée la tâhce :"+tchRef);
             return tchRef;
-            // log.info(personneReference + ", à bien crée la tâhce :"+tchRef);
         }
         else
         {
@@ -136,6 +139,7 @@ public class Application implements InterfaceGestionnairePersonne,InterfaceGesti
         ArrayList<TacheReference> arrTchRef = personne_taches.get(personneReference);
         taches.remove(tacheReference);
         arrTchRef.remove(tacheReference);
+        log.info("La tache "+tacheReference+" de" +personneReference +" à bien été supprimé");
     }
 
     @Override
@@ -152,6 +156,7 @@ public class Application implements InterfaceGestionnairePersonne,InterfaceGesti
         if(arrTchRef.contains(tacheReference) && taches.get(tacheReference).getRefpers().equals(personneReference))
         {
             taches.get(tacheReference).setDate(date);
+            log.info("La tache "+tacheReference+" de" +personneReference +" à bien été replanifié");
         }
         else
         {
@@ -223,6 +228,7 @@ public class Application implements InterfaceGestionnairePersonne,InterfaceGesti
         if(tch.getMode() == Mode.PARTAGE)
         {
             personne_taches.get(personneReference).add(tacheReference);
+            log.info("La tache "+tacheReference+" à bien été attribué à " +personneReference );
         }
         else
         {
