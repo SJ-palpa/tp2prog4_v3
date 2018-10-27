@@ -1,0 +1,45 @@
+
+?
+src/Status.java,d/f/dff23e43724ea3ae7d8261325c931f1f98fed9c9
+C
+src/Resolution.java,b/3/b3a5769c58997f633addaad0dcff099a82023951
+=
+src/Mode.java,c/9/c930fd2017f22ff7b8d2263d4b1885d3e71b6cf8
+J
+src/PersonneReference.java,6/c/6c54837a82770bdc4ea6a1b2db524fd28f0c0fa2
+A
+src/Personne.java,1/6/16dd3da62b2205ccea408b00cd0d43b6904aeec4
+?
+src/Groupe.java,6/1/61580e1cd2587b462d89cf45d3494e4990ec9207
+V
+&src/InterfaceGestionnairePersonne.java,2/a/2ad4283b9b77cbc7c4fd840a1a6a770b5f6f7e88
+S
+#src/InterfaceGestionnaireTache.java,2/3/2341b3a57924da62f71790375da63c6e20bfcc71
+G
+src/TacheReference.java,5/e/5e8f1a112ad9db5e3259753257872202f1bc47b7
+H
+src/GroupeReference.java,d/2/d27fdad9504620b173e19bb32f10d7de43fb696c
+T
+$src/InterfaceGestionnaireGroupe.java,4/b/4bf5e56015ec4beddc9a0520366460abde2a129a
+K
+src/GestionnaireTaches.java,a/2/a224c4d042918c06dc401957074e55c258162c2b
+O
+test/GestionnaireTacheTest.java,8/7/87752b0fed155c113d65952fdea3836b21c9c98c
+P
+ test/GestionnaireGroupeTest.java,0/4/043b71a58dfc4cc606bb95f8b69f58c0668ee692
+N
+test/GestionnairePersonne.java,c/c/cca5f2f7a254c8f276db5ed2e3dc5de055a6787b
+S
+#src/Exceptions/UnknownPersonne.java,9/6/96eb8e11bea85b088827d884a8f49cacecac5ef8
+P
+ src/Exceptions/PreviousDate.java,5/f/5f6799d4859b7732e3418781383055957dc14859
+Q
+!src/Exceptions/UnknownGroupe.java,c/4/c474a995e7a59e19f8f20d83086d8b0b97760ca6
+P
+ src/Exceptions/UnknownTache.java,c/f/cf8f343716a860fcc27df043a658cedc082b10cf
+Y
+)src/Exceptions/UnknownPersonnInGroup.java,6/7/6766de15e37928381832b5a4eabbe6905e61ba3c
+>
+src/Tache.java,0/6/061da11cd3989e76bcae2aaf7d758315415c4dd7
+Y
+)src/Exceptions/UnknownTacheInPersons.java,9/0/90eabe5ddee2fc95b6cf500ed95b4212dfea3737
